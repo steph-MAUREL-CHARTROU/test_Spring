@@ -9,12 +9,15 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class MainBean {
 
     @Autowired
     private GameService gameService;
-
+    
+    @PostConstruct
     public void start() {
         System.out.println("Main bean started !");
 
